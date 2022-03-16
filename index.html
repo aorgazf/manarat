@@ -24,7 +24,7 @@
                               <small>are available for sale</small>
                           </h1>
                           <p class="mt-4">
-                            .11                            
+                            .15                            
                           </p>
                           <div class="pt-5">
                               <label for="name">
@@ -38,7 +38,7 @@
                             <div class="container">
                                 <div class="row height-100">
                                     <div class="col-sm-10 offset-sm-1 mt-2">
-                                        <form id="main-offer-form" action="https://formspree.io/f/xoqrllpd" method="post">
+                                        <form id="main-offer-form" action="https://formspree.io/f/xoqrllpd" onsubmit="validate_reCaptcha()" method="post">
                                             <h2 class="text-primary">Interested in this domain?</h2>
                                             <hr/>
                                             <div class="form-group">
@@ -97,6 +97,18 @@
                 </div>
             </div>
         </section>
+        <script>
+            function validate_reCaptcha() {
+                var response = grecaptcha.getResponse();
+                if(response.length == 0) {
+                    alert('');
+                }
+                else {
+                    //reCaptch verified
+                    document.getElementById('main-offer-form').submit();
+                }
+            }
+        </script>
         <script src="js/jquery.min.js"></script>
         <script src="js/jquery.validate.min.js"></script>
         <script>
