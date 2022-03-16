@@ -84,7 +84,7 @@
                                                 <textarea name="comments" class="form-control" placeholder="Message (optional)"></textarea>
                                             </div>
                                             <div class="form-group">
-                                              <div id="recaptcha" class="g-recaptcha" data-sitekey="6LfnOuceAAAAAOmQGCqyJL0046plX5SJT8xMPbH-" data-callback="onSubmit" data-size="invisible"></div>
+                                              <div id="recaptcha" class="g-recaptcha" data-sitekey="6LfnOuceAAAAAOmQGCqyJL0046plX5SJT8xMPbH-" ></div>
                                             </div>
 
                                             <button type="submit" class="btn text-white btn-lg bg-primary btn-block">Make an offer</button>
@@ -117,8 +117,8 @@
                 },
                 phone: {
                   required: true,
-                  minlength:10,
-                  maxlength:10
+                  minlength:6,
+                  maxlength:15
                 },
                 price: "required",
                 comments: {
